@@ -23,11 +23,12 @@
     </footer>
     <script>
       function addNumbers() {
+        //INPUT - enter two numbers into the text fields
         const number1 = parseFloat(document.getElementById('number1').value);
         const number2 = parseFloat(document.getElementById('number2').value);
-        
+        //PROCESSING - add the two numbers together
         let output = (number1 + number2);
-
+        //OUTPUT - show the sum of the two numbers
         document.getElementById('output').innerHTML = output;
       }
     </script>
