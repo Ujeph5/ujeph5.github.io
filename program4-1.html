@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <title>Add Two Numbers</title>
+    <link href="/css/styles.css" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <h1>Week 4: Add Two Numbers</h1>
+      <h2>Joseph Alexander</h2>
+    </header>
+    <main>
+      <h3>Add Two Numbers</h3>
+      <label>Enter Number One: <input type="text" id="number1" /></label>
+      <label>Enter Number Two: <input type="text" id="number2" /></label>
+      <label><button onclick="addNumbers()">Add Numbers</button></label>
+      <hr />
+      <p><span id="output"></span></p>
+    </main>
+    <footer>
+      &copy;2021 &bull; Joseph Alexander &bull; BYU-Idaho &bull; CIT 160
+    </footer>
+    <script>
+      function addNumbers() {
+        const number1 = parseFloat(document.getElementById('number1').value);
+        const number2 = parseFloat(document.getElementById('number2').value);
+        
+        let output = (number1 + number2);
+
+        document.getElementById('output').innerHTML = output;
+      }
+    </script>
+  </body>
+</html>
