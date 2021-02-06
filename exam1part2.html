@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <title>Cylinder Volume</title>
+    <link href="/css/styles.css" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <h1>Cylinder Volume</h1>
+      <h2>Joseph Alexander</h2>
+    </header>
+    <main>
+      <h3>Calculate the Volume of a Cylinder</h3>
+      <label>Cylinder Height: <input type="text" id="height" /></label>
+      <label>Cylinder Radius: <input type="text" id="radius" /></label>
+      <label><button onclick="cylinderVolume()">Calculate</button></label>
+      <hr />
+      <p><span id="output"></span></p>
+    </main>
+    <footer>
+      &copy;2021 &bull; Joseph Alexander &bull; BYU-Idaho &bull; CIT 160
+    </footer>
+    <script>
+        function cylinderVolume() {
+            //INPUT - user inputs cylinder's height and radius
+            let height = parseFloat(document.getElementById('height').value);
+            let radius = parseFloat(document.getElementById('radius').value);
+            //PROCESSING - V = pi * r * r * h
+            let volume = Math.round(Math.PI * Math.pow(radius, 2) * height);
+            //OUTPUT - displays cylinder volume rounded to the nearest whole number
+            document.getElementById('output').innerHTML = `Volume: ${volume}`;
+        }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <title>Employee Pay After Tax</title>
+    <link href="/css/styles.css" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <h1>Employee Pay After Tax</h1>
+      <h2>Joseph Alexander</h2>
+    </header>
+    <main>
+      <h3>Pay After Tax</h3>
+      <label>Total Regular Hours: <input type="text" id="regularHours" /></label>
+      <label>Total Overtime Hours: <input type="text" id="overtimeHours" /></label>
+      <label><button onclick="payAfterTax()">Calculate Pay</button></label>
+      <hr />
+      <p><span id="output"></span></p>
+    </main>
+    <footer>
+      &copy;2021 &bull; Joseph Alexander &bull; BYU-Idaho &bull; CIT 160
+    </footer>
+    <script>
+        function payAfterTax() {
+        //INPUT - User enters regular hours worked and overtime hours
+            let r = parseFloat(document.getElementById('regularHours').value);
+            let o = parseFloat(document.getElementById('overtimeHours').value);
+        //PROCESSING - (15 * regularHours + 22.5 * overtimeHours) - .15 * (15 * regularHours + 22.5 * overtimeHours)
+            let payAfterTax = (15 * r + 22.5 * o) - .15 * (15 * r + 22.5 * o);
+            const digits = 2;
+            const multiplier = Math.pow(10, digits);
+            payAfterTax = Math.round(payAfterTax * multiplier) / multiplier;
+        //OUTPUT - display the employee's pay after taxes
+            document.getElementById('output').innerHTML = `$ ${payAfterTax}`;
+        }
+    </script>
+  </body>
+</html>
