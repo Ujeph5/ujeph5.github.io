@@ -12,17 +12,15 @@
     </header>
     <main>
       <h3>Test Your Math Skills!</h3>
-      <input type="text" id="number1" />
-      <label for="operator">Choose sign</label>
+      <input type="text" id="number1" placeholder="First number" />
       <select name="operator" id="operator">
         <option value="+">+</option>
         <option value="-">-</option>
         <option value="*">*</option>
         <option value="/">/</option>
       </select>
-      <br><br>
-      <input type="text" id="number2" />
-      <label>Enter your answer<br><input type="text" id="answer" /></label>
+      <input type="text" id="number2" placeholder="Second Number" />
+      <input type="text" id="answer" placeholder="Enter your answer" />
       <label><button onclick="simpleCalc()">Calculate</button></label>
       <hr />
       <p><span id="output"></span></p>
