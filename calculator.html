@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <title>Calculator</title>
+    <link href="/css/styles.css" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <h1>Simple Calculator</h1>
+      <h2>Joseph Alexander</h2>
+    </header>
+    <main>
+      <h3>Test Your Math Skills!</h3>
+      <input type="text" id="number1" />
+      <label for="operator">Choose sign</label>
+      <select name="operator" id="operator">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+      </select>
+      <br><br>
+      <input type="text" id="number2" />
+      <label>Enter your answer<br><input type="text" id="answer" /></label>
+      <label><button onclick="simpleCalc()">Calculate</button></label>
+      <hr />
+      <p><span id="output"></span></p>
+    </main>
+    <footer>
+      &copy;2021 &bull; Joseph Alexander &bull; BYU-Idaho &bull; CIT 160
+    </footer>
+    <script src="js/calculator.js"></script>
+  </body>
+</html>
