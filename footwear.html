@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <title>Weather Shoes</title>
+    <link href="/css/styles.css" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <h1>Weather Shoes</h1>
+      <h2>Joseph Alexander</h2>
+    </header>
+    <main>
+      <h3>Shoes for the Weather</h3>
+      <label for="weather-select">Select the weather</label>
+      <select name="footwear" id="weather-select">
+          <option value="hot">hot</option>
+          <option value="rain">rain</option>
+          <option value="snow">snow</option>
+          <option value="unknown">unknown</option>
+      </select>
+      <label><button onclick="footwear()">Get your shoes</button></label>
+      <hr />
+      <p><span id="output"></span></p>
+    </main>
+    <footer>
+      &copy;2021 &bull; Joseph Alexander &bull; BYU-Idaho &bull; CIT 160
+    </footer>
+    <script src="js/footwear.js"></script>
+  </body>
+</html>
