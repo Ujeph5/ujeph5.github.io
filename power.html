@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <title>Power</title>
+    <link href="/css/styles.css" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <h1>Power</h1>
+      <h2>Joseph Alexander</h2>
+    </header>
+    <main>
+      <h3>Powers of Two</h3>
+      <label><button onclick="power()">View Powers</button></label>
+      <hr />
+      <p><span id="output"></span></p>
+    </main>
+    <footer>
+      &copy;2021 &bull; Joseph Alexander &bull; BYU-Idaho &bull; CIT 160
+    </footer>
+    <script>
+        function power() {
+            let output = "";
+            for (let i = 0; i < 32; i++) {
+                let power = Math.pow(2, i);
+                output += `${power}, `;
+            }
+            document.getElementById('output').innerHTML = output;
+        }
+    </script>
+  </body>
+</html>

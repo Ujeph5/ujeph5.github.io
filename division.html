@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <title>Division</title>
+    <link href="/css/styles.css" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <h1>Division</h1>
+      <h2>Joseph Alexander</h2>
+    </header>
+    <main>
+      <h3>Find your integer quotients</h3>
+      <label>Start: <input type="text" id="start" /></label>
+      <label>End: <input type="text" id="end" /></label>
+      <label>Divisor: <input type="text" id="divisor" /></label>
+      <label><button onclick="division()">Divide</button></label>
+      <hr />
+      <p><span id="message"></span></p>
+    </main>
+    <footer>
+      &copy;2021 &bull; Joseph Alexander &bull; BYU-Idaho &bull; CIT 160
+    </footer>
+    <script>
+        function division() {
+            let start = parseInt(document.getElementById('start').value);
+            let end = parseInt(document.getElementById('end').value);
+            let divisor = parseInt(document.getElementById('divisor').value);
+            let message = "";
+            for (let i = start; i <= end; i++) {
+                let remainder = i % divisor;
+                if (remainder == 0) {
+                    message += `${i} `;
+                }
+            }
+            document.getElementById('message').innerHTML = message;
+        }
+    </script>
+  </body>
+</html>
