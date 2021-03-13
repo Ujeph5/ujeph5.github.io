@@ -4,8 +4,8 @@ function doInputOutput(){
     let windspeed = parseFloat(document.getElementById('windspeed').value);
     let message;
     if (temperature <= 50 && windspeed >= 3) {
-        //let windChill = windChill(temperature, windspeed);
-        message = `${windChill(temperature, windspeed)} degrees`;
+        const windChillValue = windChill(temperature, windspeed);
+        message = `${windChillValue} degrees`;
     } else {
         message = "Wind chill is not calculated for temperatures above 50 degrees Fahrenheit nor for wind speeds below 3 miles per hour."
     }
